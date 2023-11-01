@@ -1,15 +1,27 @@
-Source: template-repository
-Section: unknown
+Source: python-smmap
+Section: python
 Priority: optional
-Maintainer: Tsic404 <liuheng@deepin.org>
-Build-Depends: debhelper (>= 11)
-Standards-Version: 4.1.3
-Homepage: https://github.com/deepin-community/template-repository
-#Vcs-Browser: https://salsa.debian.org/debian/deepin-community-template-repository
-#Vcs-Git: https://salsa.debian.org/debian/deepin-community-template-repository.git
+Maintainer: Debian Python Team <team+python@tracker.debian.org>
+Uploaders: TANIGUCHI Takaki <takaki@debian.org>, Yaroslav Halchenko <debian@onerussian.com>
+Build-Depends: debhelper-compat (= 13)
+        ,dh-python
+	,python3-all
+	,python3-setuptools
+	,python3-nose
+Standards-Version: 4.6.0
+Homepage: https://github.com/Byron/smmap
+Vcs-Git: https://salsa.debian.org/python-team/packages/python-smmap.git
+Vcs-Browser: https://salsa.debian.org/python-team/packages/python-smmap
 
-Package: template-repository
-Architecture: any
-Depends: ${shlibs:Depends}, ${misc:Depends}
-Description: <insert up to 60 chars description>
- <insert long description, indented with spaces>
+Package: python3-smmap
+Architecture: all
+Depends: ${python3:Depends}, ${misc:Depends}
+Suggests: python3-nose
+Provides: ${python3:Provides}
+Description: pure Python implementation of a sliding window memory map manager
+ Smmap wraps an interface around mmap and tracks the mapped files as well
+ as the amount of clients who use it. If the system runs out of resources,
+ or if a memory limit is reached, it will automatically unload unused maps
+ to allow continued operation.
+ .
+ This package for Python 3.

@@ -1,5 +1,173 @@
-template-repository (1.0-1) unstable; urgency=medium
+python-smmap (5.0.0-1) unstable; urgency=medium
 
-  * Initial release
+  * New upstream version 5.0.0
+  * Bump Standards-Version to 4.6.0
 
- -- Tsic404 <liuheng@deepin.org>  Sat, 28 Jan 2023 13:46:49 +0800
+ -- TANIGUCHI Takaki <takaki@debian.org>  Sun, 28 Nov 2021 22:30:57 +0900
+
+python-smmap (4.0.0-1) unstable; urgency=medium
+
+  [ Ondřej Nový ]
+  * d/control: Update Maintainer field with new Debian Python Team
+    contact address.
+  * d/control: Update Vcs-* fields with new Debian Python Team Salsa
+    layout.
+
+  [ TANIGUCHI Takaki ]
+  * New upstream version 4.0.0
+  * Bump Standards-Version to 4.5.1
+  * Bump debian-compat to 13
+
+ -- TANIGUCHI Takaki <takaki@debian.org>  Sun, 28 Feb 2021 17:50:15 +0900
+
+python-smmap (3.0.4-1) unstable; urgency=medium
+
+  * New upstream version 3.0.4
+
+ -- TANIGUCHI Takaki <takaki@debian.org>  Sat, 30 May 2020 19:34:06 +0900
+
+python-smmap (3.0.2-1) unstable; urgency=medium
+
+  * New upstream version 3.0.2
+
+ -- TANIGUCHI Takaki <takaki@debian.org>  Sat, 25 Apr 2020 13:10:39 +0900
+
+python-smmap (3.0.1-1) unstable; urgency=medium
+
+  [ Debian Janitor ]
+  * Bump debhelper from old 11 to 12.
+  * Set upstream metadata fields: Bug-Database, Bug-Submit, Repository,
+    Repository-Browse.
+
+  [ TANIGUCHI Takaki ]
+  * Add CI config
+  * d/watch: Fix source URL
+  * New upstream version 3.0.1
+  * Remove unused d/patches/*
+  * Bump Standards-Version to 4.5.0
+
+ -- TANIGUCHI Takaki <takaki@debian.org>  Sun, 05 Apr 2020 15:18:19 +0900
+
+python-smmap (2.0.5-2) unstable; urgency=medium
+
+  [ Ondřej Nový ]
+  * Use debhelper-compat instead of debian/compat.
+
+  [ Sandro Tosi ]
+  * Drop python2 support; Closes: #938177
+
+ -- Sandro Tosi <morph@debian.org>  Sat, 26 Oct 2019 19:40:25 -0400
+
+python-smmap (2.0.5-1) unstable; urgency=medium
+
+  [ Chris Lamb ]
+  * Remove trailing whitespaces.
+
+  [ TANIGUCHI Takaki ]
+  * New upstream version 2.0.5
+
+ -- TANIGUCHI Takaki <takaki@debian.org>  Fri, 26 Oct 2018 11:22:45 +0900
+
+python-smmap (2.0.4-1) unstable; urgency=medium
+
+  [ Ondřej Nový ]
+  * d/control: Set Vcs-* to salsa.debian.org
+  * d/copyright: Use https protocol in Format field
+  * d/control: Deprecating priority extra as per policy 4.0.1
+  * d/watch: Use https protocol
+  * Convert git repository from git-dpm to gbp layout
+
+  [ Piotr Ożarowski ]
+  * Add dh-python to Build-Depends
+
+  [ TANIGUCHI Takaki ]
+  * New upstream version 2.0.4
+  * Bump Stanrads-Version to 4.2.0.1
+  * debian/compat: 11
+
+ -- TANIGUCHI Takaki <takaki@debian.org>  Thu, 16 Aug 2018 14:53:39 +0900
+
+python-smmap (2.0.3-1) unstable; urgency=medium
+
+  * New upstream version 2.0.3
+  * debian/rules: Revert to default dh_clean
+  * debian/compat: Bump to 10
+  * debian/patches: refresh patches
+  * Bump Standards-Version to 4.0.0
+
+ -- TANIGUCHI Takaki <takaki@debian.org>  Tue, 04 Jul 2017 17:03:49 +0900
+
+python-smmap (2.0.1-1) unstable; urgency=medium
+
+  * Minor upstream release
+  * debian/control
+    - added myself to uploaders
+
+ -- Yaroslav Halchenko <debian@onerussian.com>  Fri, 28 Oct 2016 20:30:35 -0400
+
+python-smmap (2.0.0-1) unstable; urgency=medium
+
+  [ Ondřej Nový ]
+  * Fixed VCS URL (https)
+
+  [ Yaroslav Halchenko ]
+  * New upstream release
+    - adjusted debian/watch to monitor smmap2 project -- was renamed
+      but module name remained smmap, thus keeping debian package name intact
+
+ -- Yaroslav Halchenko <debian@onerussian.com>  Fri, 21 Oct 2016 08:46:02 -0400
+
+python-smmap (0.9.0-3) unstable; urgency=medium
+
+  * git-dpm'ed patch: avoid demanding optional nosexcover while running tests
+
+ -- Yaroslav Halchenko <debian@onerussian.com>  Wed, 24 Feb 2016 10:19:34 -0500
+
+python-smmap (0.9.0-2) unstable; urgency=medium
+
+  [ Yaroslav Halchenko ]
+  * changelog for 0.9.0-1 to unstable
+
+  [ SVN-Git Migration ]
+  * git-dpm config
+  * Update Vcs fields for git migration
+
+  [ TANIGUCHI Takaki ]
+  * debian/watch: Use pypy.debian.net.
+  * Support Python-3 (Closes: #778931)
+
+ -- TANIGUCHI Takaki <takaki@debian.org>  Wed, 25 Nov 2015 22:37:41 +0900
+
+python-smmap (0.9.0-1) unstable; urgency=medium
+
+  * Fresh upstream release (Closes: #795915)
+
+ -- Yaroslav Halchenko <debian@onerussian.com>  Mon, 17 Aug 2015 18:25:10 -0400
+
+python-smmap (0.8.3-1) experimental; urgency=medium
+
+  * Fresh upstream release (required by fresh python-git for testing)
+  * debian/control
+    - bump Standards-Version to 3.9.6
+    - add python-nose to Build-Depends and Suggests for testing
+  * debian/rules
+    - enable build time testing
+
+ -- Yaroslav Halchenko <debian@onerussian.com>  Wed, 17 Dec 2014 22:24:06 -0500
+
+python-smmap (0.8.2-2) unstable; urgency=medium
+
+  [ Jakub Wilk ]
+  * Use canonical URIs for Vcs-* fields.
+
+  [ Javi Merino ]
+  * Drop unneeded build-depends on python-support
+  * Capitalize Python in the description (thanks lintian)
+
+ -- Javi Merino <vicho@debian.org>  Sun, 31 Aug 2014 15:21:33 -0700
+
+python-smmap (0.8.2-1) unstable; urgency=low
+
+  * Initial release (Closes: #667496,#638973)
+
+ -- TANIGUCHI Takaki <takaki@debian.org>  Wed, 04 Apr 2012 22:51:53 +0900
